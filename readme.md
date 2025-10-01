@@ -174,7 +174,133 @@ let cad3 = "vengo";
 console.log(cad1.concat(cad2, cad3));
 ```
 
+#### Trim
+
+este metofo elimina los espacios que existen al inicio o al final de una caden de texto.
+
+```js
+let texto="hola"
+let nuevoTexto=texto.trim() //hola
+let otroTexto texto="hola"
+let nuevoOtroTexto=otroYexto.trim() //hola
+```
+
+#### Slice
+
+este metodo nos permite extraer partes de una ccadena , especificando sus indicices, donde comenzar y hasta donde mostrar
+
+```js
+let parrafo = "hola soy Ronald";
+// solo quiero que me muestre Ronald
+parrafo.slice(9.14);
+parrafo.slice();
+```
+
+#### split
+
+este metodo retorna una lista basandose en un separador que se le indique
+
+```js
+let parrafo = "solo se que nada se";
+parrafo.split(""); //["solo","se","nada","nada","se"]
+let url = "google.com/search?=gatitos";
+let gatito = url.split("="); //["google.com/search?=gatitos"]
+console.log(gatito[1]); //gatitos
+let listaFrutas = "manzana,tomate,pera,naranja";
+listaFrutas, split("=");
+```
+
 ### 6.2 Metodos para listas - Arrays
+
+#### Crear una lista
+
+```js
+let lista = [];
+```
+
+#### Agregando elementos a una lista
+
+```js
+lista[0] = "manzana";
+```
+
+#### Agregando elemetos al final de una lista
+
+El metodo `push` agrega elementos al final de una lista
+
+```js
+let lista = [];
+lista.push("manzana");
+```
+
+#### Agregando elementos al inicio de una lista
+
+el metodo `unshift` agrega elelmtos al inico de una lista
+
+```js
+let amigos = ["ronny", "lisbet", "josema"];
+amigos.unshift("ronald");
+```
+
+#### Removiendo elementos de una lista
+
+el metodo `pop` al contrario de push extrae el ultimo elemento de una lista
+
+```js
+
+```
+
+#### shift
+
+el metodo `shift` al contrario de un unshift extrae el primer elemento
+
+#### Eliminando el elemento de una lista
+
+#### delete
+
+eliminina un elemento en base a su indice
+
+```js
+let texto = ["hola", "como", "", "estas"];
+delete texto[2];
+```
+
+#### splice
+
+este metodo elimina el elemento en base a su pocision (indice)y a la cantidad elemntos a eleiminar
+
+```js
+let vocals = ["a", "e", "e", "i", "o", "u"];
+vocals.splice(2, 1);
+vocals;
+```
+
+#### Conbinando o uniendo listas((Array))
+
+#### concat
+
+este metodo crea un nuevo array que contiene los elemntos del array original seguido por los elemenentos de uno o mas array proporcionado
+
+```js
+let friends = [];
+let amigosPriamria = ["alfredo", "luis", "edgar"];
+let amigossecundaria = ["edison", "remmy", "miguel"];
+let amigossuperior = ["josue", "marlon", "handy"];
+friends = amigosPriamria.concat(amigossecundaria, amigossuperior);
+```
+
+### Metodos para iterar una lista
+
+#### forEach
+
+este metodo ejecuta una funcion anonimo por cada elemento de un array
+
+```js
+let numeros = [1, 2, 3, 4, 5];
+numeros.forEach((n) => {
+  console.log(n);
+});
+```
 
 ### Acceder
 
