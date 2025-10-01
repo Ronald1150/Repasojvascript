@@ -29,7 +29,30 @@ let amigosPriamria = ["alfredo", "luis", "edgar"];
 let amigossecundaria = ["edison", "remmy", "miguel"];
 let amigossuperior = ["josue", "marlon", "handy"];
 friends = amigosPriamria.concat(amigossecundaria, amigossuperior);
+//forEach
 let numeros = [1, 2, 3, 4, 5];
 numeros.forEach((n) => {
   console.log(n);
 });
+//map
+let number = [1, 2, 3, 4, 5];
+numerosnuevos = number.map((n) => {
+  return n + 1;
+});
+
+console.log(numerosnuevos);
+let nuevossNumeros = numeros.filter((n) => {
+  n < 4;
+});
+let listNumber = [10, 11, 3, 20, 5];
+let mayorDiez = listNumber.filter((n) => {
+  return n > 10;
+});
+console.log(mayorDiez);
+//de una lista de numero dl 1a 10 uasndo filter eliminar el numero 1
+let unoAldies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let listasinuno = unoAldies.filter((n) => {
+  return;
+  n != 1;
+});
+console.log(listasinuno);

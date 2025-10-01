@@ -302,6 +302,97 @@ numeros.forEach((n) => {
 });
 ```
 
+#### Map
+
+este metodo ejecuta una funcion anonoma por cada elemento de un array,
+generando una nueva lista
+
+```js
+let numeros = [1, 2, 3, 4, 5];
+numerosnuevos = numeros.map((n) => {
+  return n + 1;
+});
+```
+
+#### Metodos para buscar elementos en una lista
+
+#### includes
+
+este metodo busca un valor en especifico y devuelbe un valor booleano en caso de encontrar el valor buscado retorna true
+caso contrario false
+
+```js
+let vocals = ["a", "i", "o", "u"];
+let buscaE = vocals.includes("e");
+//retorna false
+let buscaA = vocals.includes("a");
+//retorna true
+let fruits = ["pera", "higo", "tomato"];
+let estaPera = fruits.includes("pera");
+console.log(pera);
+```
+
+#### filter
+
+este metodo se usa para encontrar elelmentos dentro de una lista que cumplan con cierta condicion
+
+```js
+let numeros = [2, 4, 5, 7, 8, 1, 2, 6];
+//deseo una lista con los numeros que sean menor a cuatro
+let nuevossNumeros = numeros.filter((n) => {
+  n < 4;
+});
+```
+
+#### find
+
+este metodo se usa para encontrar el primer elemento que cumpla con cierta condicio, a diferencia de `filter` solo retorna un elemento el que conicida con la condicion
+
+```js
+let lisnumeros = [10, 11, 3, 20, 5];
+//devolver el numero menor a dies
+let menorDiez = lisNumeros.find((n) => {
+  return n > 10;
+});
+console.log(menordiez);
+```
+
+### 6.3 Metodos para objetos
+
+### creando un objeto
+
+```js
+let objeto = {};
+```
+
+#### Agregando
+
+recuerden que el elemento esta conformado por`clavevalor`
+
+```js
+objeto["nombre"] = "Ronald";
+objeto["edad"] = 18;
+objeto["CUI"] = 45454545;
+```
+
+#### como actualizamos un objeto
+
+para realizar l actualizacion del valor de una elemento temenmos que acceder a traves de su clave y asignar el nuevo valor
+**obsevacion** la clave debe ser la misma a actualizar de no existir creara una nueva
+
+```js
+objeto["edad"] = 20;
+```
+
+#### Eliminado un elemento de un objeto
+
+para eliminar un elemneto de un objeto hacemos uso de una operador unario
+`delete`.
+
+```js
+delete objeto.CUI;
+```
+
 ### Acceder
 
 ### Modificarffffsfsf
