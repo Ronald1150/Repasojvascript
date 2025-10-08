@@ -404,3 +404,56 @@ delete objeto.CUI;
 ### Eliminar
 
 ### Ordenar
+
+## 7. es6
+
+### Arrow function
+
+## destructuracion
+
+este es una tecnica para el empaquetado de listas u objetos en variables
+esta tecnica faculita el acceso a los elementos de una lista u objeto
+
+```js
+let alumno = {
+  nombre: "miguel",
+  edad: "17",
+};
+cosole.log(alumno.nombre);
+console.log(alumno["edad"]);
+//desestrcuturacion
+let { nombre, edad } = alumno;
+```
+
+## 8. DOM
+
+- segun sus siglas es Modelo deObjeto de Documento
+- para la web es una API del navegador ,eson significa que nos proporciona una interfas para comunicarnos entrer html y javascript.
+- Segun su funcionalidad DOM e el encargado de convertir documento `html` y `css` en objetos de `javascript` , o en un arbol de objetos.
+- Para `javascript` el `DOM` es un objeto con el que podemos leer y modificar a nuestro antojo.
+- La manera como DOM nos permite interactuar con nuestro documentos `html` y `css` son a traves de `selectores`.
+
+### Selectores
+
+Es la manera de como podremos manipular el `DOM` este es primer paso que devemos dominar para realizar operaciones de lectura o modificasion
+
+#### Selectores tradicionales
+
+Estos selectores son metodos de documento porque`DOM` trabaja con el documento.
+
+```js
+//selector de id
+document.getElemntByid("mi_div"
+//<section id="mi_div"></section>
+//--selectores por su atributo name
+//<input name="dni" value="34556"><>
+//dni="34556"
+document.getElementByName("dni")
+document.setElemntTagName("dni")
+//--Selectores por su tag
+//<h1></h1>
+document.getElementByTagName("h1")
+)
+```
+
+> [!tip] es la programacion web `DAW` se hace el uso de dos tecnicas , 1. obtecion de datos(get), 2. creacion de datos(set)
