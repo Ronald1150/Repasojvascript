@@ -437,13 +437,16 @@ let { nombre, edad } = alumno;
 
 Es la manera de como podremos manipular el `DOM` este es primer paso que devemos dominar para realizar operaciones de lectura o modificasion
 
-#### Selectores tradicionales
+#### Captura de elementos
+
+##### Selectores tradicionales
 
 Estos selectores son metodos de documento porque`DOM` trabaja con el documento.
 
 ```js
 //selector de id
 document.getElemntByid("mi_div"
+//retornar ub ejemplo todos los elementos
 //<section id="mi_div"></section>
 //--selectores por su atributo name
 //<input name="dni" value="34556"><>
@@ -454,6 +457,45 @@ document.setElemntTagName("dni")
 //<h1></h1>
 document.getElementByTagName("h1")
 )
+//--selectores por sus clases
+//<div class=rojo></div>
+document.getElemntByName
 ```
 
 > [!tip] es la programacion web `DAW` se hace el uso de dos tecnicas , 1. obtecion de datos(get), 2. creacion de datos(set)
+
+##### Selectores modernos o avanzado
+
+```js
+//para la captura de un elemento, o el primer elemnto que coincida con la busqueda
+document.querySelector();
+//para la captura de un elemento, o el primer elemnto que coincida con la clase
+document.querySelector(".nombre_clase");
+//para la captura de un elemento, o el primer elemnto que coincida con el nombre del id
+document.querySelector("#nombre_id");
+//para la captura de un elemento, o el primer elemnto que coincida con el nombre de la etiqueta
+document.querySelector("p");
+document.querySelector(".imput[nmae="dni"]");
+//para acceder a todas las coincidencias
+//esto retorna un array con todas las coincidencias
+document.querySelectorAll(".nombre_clase");
+```
+
+##### Acceder a contenido y actualizar contenido
+
+una ves capturado el elemento con `querySelector` pueden hacer uso de `textContent ` para accder al contenido del elemnto , de esta mismo forma podemos editar o actualizar el contenido `textContnt="hola"` esto lo que es astualizar el contenido anterior con el contenido que se le asignado.
+`textContend` solo solo se ussa si desemaos agreagr contenido de tipo texto .si deseaamos setear o agreagr contenido de tipo `html` se debera usar `innerHTML`.
+
+```js
+//<p id="text">este es un contenido</p>
+let etiquetap = document.querySelector("#text");
+console.log(etiquetaP.textContent);
+//este es un contenido
+etiquetaP.textContent = "nuevo texto";
+console.log(etiquetaP.textContent);
+//nuevo texto
+
+//<p id="text">este es un contenido</p>
+let div = document.querySelector("#contenedor");
+div.innerHTML = "<p>parrafo</p>">este es un
+```
