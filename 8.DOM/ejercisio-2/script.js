@@ -3,4 +3,8 @@ let primerTitulo = titulo.textContent;
 textContent;
 titulo.textContent = "Otro titulo";
 let contenido = document.querySelector("#contenido");
-contenido.innerHtml = "<p>este es un parrafo</p>";
+contenido.innerHtml = `<p>${primerTitulo}</p>`;
+let amigos = ["miguel", "ruth", "jose"];
+contenido.innerHTML = amigos.map((el) => {
+  return `<p></p>`;
+});

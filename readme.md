@@ -481,7 +481,7 @@ document.querySelector(".imput[nmae="dni"]");
 document.querySelectorAll(".nombre_clase");
 ```
 
-##### Acceder a contenido y actualizar contenido
+##### Acceder a contenido y actualizar contenido, crear y remover atributos
 
 una ves capturado el elemento con `querySelector` pueden hacer uso de `textContent ` para accder al contenido del elemnto , de esta mismo forma podemos editar o actualizar el contenido `textContnt="hola"` esto lo que es astualizar el contenido anterior con el contenido que se le asignado.
 `textContend` solo solo se ussa si desemaos agreagr contenido de tipo texto .si deseaamos setear o agreagr contenido de tipo `html` se debera usar `innerHTML`.
@@ -499,3 +499,78 @@ console.log(etiquetaP.textContent);
 let div = document.querySelector("#contenedor");
 div.innerHTML = "<p>parrafo</p>">este es un
 ```
+
+una ves conocido la forma de capturar elementos `html` y la forma de setear contenido (`textContent`) y html(`innerhtml`), tambien podemos setear atributos y removerlos.
+
+```js
+//<div>contenido</div>
+//data-description
+let contenido = document.querySelector("#contenido");
+// entre parentecis van dos parametros primero el nombre del atributo a crear y segundo el valor que debe tener
+contenido.setAtribute(
+  "datra-description",
+  "valor de mi data-description"
+  //<div id="contenido" data-description="valor de mi data-description">contenido</div>
+);
+//eliminar el atributo creado
+//entre parentesis el nombre del atributo que se va eliminar
+contenido.removeAtribute("data-description");
+```
+
+#### Aggregar y eleiminar elementos
+
+para crear nuevo elemento no necesitamos capturar un elemento orque crearemos un elemento nuevo
+
+```js
+let nuevoEtiquetaP = document.createElemnt("p");
+//agreagar contenido a mi etiqueta
+nuevoEtiqurta.textContent = "informacion en el parrafo";
+//para que  esta ainformacion araresca de manera visible en mi html debemos agragarlo a un elemen to padre
+/*
+<body>
+</body>
+*/
+let body = document.querySelector("body");
+//hacer uso del metodo que me permite asignarle nuevos hijos
+body.appenChild(nuevoEtiquetap);
+//deseo elimianr  ese lemento que acabo de crear
+// usamos el nombre del elemnto a eliminar y luego usamos el metodo remove()
+nuevoEltiqueta.remove();
+```
+
+#### Modifigcar clases y eltilos
+
+estos metodo que veremos a continuacion nos pertiran cambiar de manera intractiva los estilos css que se puedan aplicar a ciertos elementos pero haciendo uso de javascriipt y logrando sus cambios de estilo de manra dinamica.
+con estos metodos agraggamos clases que existan
+**index.html**
+
+```html
+
+```
+
+- archivo **style.css**
+
+```css
+.color-fondo-rojo {
+  background-color: red;
+}
+```
+
+- archivo **script.js**
+
+```js
+//agragar a mi section el fondo rojo
+let setion = document.querySelector("#principal");
+section.classList.add("color-fondo-rojo");
+//eliminar la clase
+section.class.backgroundColor = "red";
+//<div></div>
+let caj = document.querySlector("div");
+
+//para gragar una clase
+```
+
+#### Eventos (Tarea-averiguar)
+
+Existen situaciones en las que necesitamos realizar una accion **cuando un determinado caso**, esto se puede trabajar con un `if` o puedo trabajar con un `estructura de decision` o puede trabajar con un `estructura de repeticion(bucle)` esto se puede maneja r de esta manera cuando sabemos que tiene que suceder.
+Existen situaciones en la que no sabemos exactamente cuando tenemos que activar buestra funcionalidad ,por ejemplo,no podemos **cuando** un usuario de nuestra pagina hara click en un botton , o en que momento reproducira una cansion o lo pausara, es esta situacion es cuando tenemos que manejar la funcionalidad a traves de **eventos**.
