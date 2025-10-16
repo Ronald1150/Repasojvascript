@@ -574,3 +574,39 @@ let caj = document.querySlector("div");
 
 Existen situaciones en las que necesitamos realizar una accion **cuando un determinado caso**, esto se puede trabajar con un `if` o puedo trabajar con un `estructura de decision` o puede trabajar con un `estructura de repeticion(bucle)` esto se puede maneja r de esta manera cuando sabemos que tiene que suceder.
 Existen situaciones en la que no sabemos exactamente cuando tenemos que activar buestra funcionalidad ,por ejemplo,no podemos **cuando** un usuario de nuestra pagina hara click en un botton , o en que momento reproducira una cansion o lo pausara, es esta situacion es cuando tenemos que manejar la funcionalidad a traves de **eventos**.
+
+#### Que es un evento
+
+Es una notificasion de una caracteristica que acaba de suceder.
+O es la ejecusion de una funcionalidad
+Veamos algunos ejemplos de eventos clasicos:
+
+- Eventos `click`
+- Evento `keydown` pulsamos una tecla.
+- Evento `play`.
+- Evento `wheel`:scroll con la rueda.
+- Evento `beforeprint`:cuando el usuario activa la opsion de imprimir.
+  **Tenemos dos maneras de manejar eventos **
+
+#### 1. Eventos de HTML
+
+Podemos escuchar los eventos atraves de atributos de un elemento html
+**index.html**
+
+```html
+<button onclick="alert('hola')">Saludar</button>
+```
+
+#### 2. Eventos de JavaScript
+
+La opsion **recomendada** maneja r los eventos desde ficheros (archivo) `.js`.
+Esto evita tener nombres sueltos de funciones en HTML, que luego tenemos que actualizar y mantener.
+
+#### Captura evento, metodo addEventListener
+
+este evento recibe dos parametros , el evento y la funcion a ejecutar.
+Para conocimiento el metodo `addEventListener(event,func)` es una funcion que se conporta como una funcion de tipo `callback`.
+
+```js
+
+```
